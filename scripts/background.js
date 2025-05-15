@@ -26,7 +26,6 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                         return;
                     }
 
-                    console.log("Resultados del script de Wikipedia:", results);
                     const data = results[0]?.result;
 
                     if (!data) {
@@ -34,7 +33,6 @@ chrome.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
                         return;
                     }
 
-                    console.log("Ejecutando script en Facebook con datos:", data);
                     chrome.scripting.executeScript({
                         target: { tabId: facebookTab.id },
                         func: fillFacebookForm,

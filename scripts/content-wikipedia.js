@@ -19,13 +19,11 @@
             const dateMatch = birthText.match(/\d{1,2} de \w+ de \d{4}/);
             if (dateMatch) {
                 birthDate = dateMatch[0];
-                console.log("Fecha de nacimiento extraída:", birthDate);
             }
         }
 
         if (nationalityRow) {
             nationality = nationalityRow.querySelector("td")?.innerText || nationality;
-            console.log("Nacionalidad extraída:", nationality);
         }
 
         if (name.toLowerCase().includes("cristiano")) {
